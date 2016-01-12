@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j='http://jakarta.apache.org/log4j/'>
+	<appender class="org.apache.log4j.ConsoleAppender" name="console">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%-d{HH:mm:ss}][%p][%c]- %m %n" />
+			<!-- param name="ConversionPattern" value="=%d %-5p [%t] %-17c{2} (%13F:%L) 
+				%3x - %m%n" / -->
+		</layout>
+	</appender>
+
+	<logger name="com.opensymphony.xwork2">
+		<level value="error" />
+	</logger>
+	<logger name="org.apache.struts2">
+		<level value="error" />
+	</logger>
+	<logger name="ms">
+		<level value="error" />
+	</logger>
+	
+    <logger name="org.hibernate">  
+        <level value="error" />  
+    </logger>
+	
+	<root>
+		<priority value="INFO" />
+		<appender-ref ref="console" />
+
+	</root>
+
+
+</log4j:configuration>
